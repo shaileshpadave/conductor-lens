@@ -35,9 +35,9 @@ func (c *Client) GetWorkflow(workflowID string) (*Workflow, error) {
 }
 
 func (c *Client) SearchFailed(workflowName string, limit int) (*SearchResult, error) {
-	query := "status:FAILED"
+	query := "status = FAILED"
 	if workflowName != "" {
-		query += fmt.Sprintf(" AND workflowType:%s", workflowName)
+		query += fmt.Sprintf(" AND workflowType = %s", workflowName)
 	}
 	endpoint := fmt.Sprintf("%s/api/workflow/search?query=%s&size=%d&sort=startTime:DESC",
 		c.baseURL, url.QueryEscape(query), limit)

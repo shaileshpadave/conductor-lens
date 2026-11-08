@@ -46,10 +46,10 @@ type SearchResult struct {
 }
 
 type WorkflowSummary struct {
-	WorkflowID   string `json:"workflowId"`
-	WorkflowName string `json:"workflowType"`
-	Status       string `json:"status"`
-	StartTime    int64  `json:"startTime"`
-	EndTime      int64  `json:"endTime"`
+	WorkflowID            string `json:"workflowId"`
+	WorkflowName          string `json:"workflowType"`
+	Status                string `json:"status"`
+	StartTime             string `json:"startTime"`
+	EndTime               string `json:"endTime"`
 	ReasonForIncompletion string `json:"reasonForIncompletion"`
 }

@@ -137,8 +137,8 @@ func PrintSearchResults(results []conductor.WorkflowSummary) {
 		fmt.Printf("  %s\n", faintStr(r.WorkflowID))
 		fmt.Printf("     ")
 		printStatus(r.Status)
-		if r.StartTime > 0 {
-			fmt.Printf("  %s", faintStr(formatTime(r.StartTime)))
+		if r.StartTime != "" {
+			fmt.Printf("  %s", faintStr(r.StartTime))
 		}
 		if r.ReasonForIncompletion != "" {
 			fmt.Printf("\n     ")
